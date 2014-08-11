@@ -1,6 +1,5 @@
 /*
 run as a seperate node process. 
-	$ node node_mongo_update
 This is run hourly to update the scores of each article
 Should this be run hourly?
 */
