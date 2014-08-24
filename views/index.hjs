@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+   <ol>
+            {{#array}}
+            <li><a href="http://{{url}}">{{title}}</a> : votes: {{votes}}</li>
+            {{/array}}
+        </ol>
+  </body>
+</html>

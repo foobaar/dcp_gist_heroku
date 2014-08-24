@@ -1,8 +1,0 @@
-extends layout
-
-block content
-    h1= title
-    form#formAddArticle(name="addarticle",method="post",action="/addarticle")
-        input#inputUrl(type="text", placeholder="url", name="url")
-        input#inputTitle(type="text", placeholder="title", name="title")
-        button#btnSubmit(type="submit") submit

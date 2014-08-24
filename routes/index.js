@@ -7,8 +7,7 @@ router.get('/articles', function(req, res) {
     var collection = db.get('usercollection');
 
     collection.find({type:"link"},{sort:[["score","desc"]]},function(e,docs){
-	res.setHeader('Content-Type', 'application/json');
-    res.json(docs);
+	res.render('index',{ array: docs });
     });
 });
 
