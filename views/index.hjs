@@ -5,11 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-
    <ol>
-            {{#array}}
-            <li><a href="http://{{url}}">{{title}}</a> : votes: {{votes}}</li>
-            {{/array}}
-        </ol>
+    {{#array}}
+      <li><a href="http://{{url}}">{{title}}</a> : votes: {{votes}}</li>
+    {{/array}}
+    </ol>
+<h2><a href = "https://github.com/foobaar/dcp_gist_heroku/issues>">Found an issue? Click here to Report it</a></h2>
   </body>
 </html>
