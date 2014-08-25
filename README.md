@@ -1,7 +1,7 @@
 # dcp_gist
 <img src = "https://travis-ci.org/foobaar/dcp_gist_heroku.svg">
 ###Description 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet sodales sapien, a consequat neque vestibulum in. Maecenas leo tellus, rhoncus eget ante a, pretium pretium leo. Praesent eget ipsum id elit facilisis vehicula eget non urna. 
+This is a service which captures URLS and scores them based on votes and freshness.
 
 ### Installation Information
 0. `Clone the project`
@@ -11,7 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet soda
 4. `heroku open`
 
 ### Heroku App Info
-> http://mighty-woodland-8571.herokuapp.com/
+> http://mighty-woodland-8571.herokuapp.com/articles
 
 
 ###The authors of this project are:
