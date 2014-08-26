@@ -5,6 +5,9 @@
 ###Description 
 This is a service which captures URLS and scores them based on votes and freshness.
 
+###Documentation:
+https://github.com/foobaar/dcp_gist_heroku/wiki
+
 ### Installation Information
 0. `Clone the project`
 1. `heroku create`
