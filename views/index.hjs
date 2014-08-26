@@ -10,6 +10,6 @@
       <li><a href="http://{{url}}" target="_blank">{{title}}</a> : votes: {{votes}}</li>
     {{/array}}
     </ol>
-<h3><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to Report it</a></h3>
+  <h3><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Report here.</a></h3>
   </body>
 </html>
