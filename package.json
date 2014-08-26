@@ -23,7 +23,8 @@
     "mongodb":"1.2.14",
     "monk": "0.7.1",
     "hjs": "~0.0.6",
-    "hogan-express":"*"
+    "hogan-express":"*",
+    "mongoose":"*"
   },
   "changelog": [
     {
