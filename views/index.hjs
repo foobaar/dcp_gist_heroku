@@ -7,7 +7,7 @@
   <body>
    <ol>
     {{#array}}
-      <li><a href="http://{{url}}" target="_blank">{{title}}</a> : votes: {{votes}}</li>
+      <li><a href="http://{{path}}" target="_blank">{{name}}</a> : votes: {{votes}}</li>
     {{/array}}
     </ol>
   <h3><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Report here.</a></h3>
