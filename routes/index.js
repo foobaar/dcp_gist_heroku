@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 router.get('/articles', function(req, res){
 	article.find({}, function(err, articles){
         res.setHeader('Content-Type', 'application/json');
-        res.json(articles);
+        res.render('index',{array: docs });
    });
 });
 
