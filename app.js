@@ -6,7 +6,6 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var monk = require('monk');
 
 var uristring = 
   process.env.MONGOLAB_URI || 
