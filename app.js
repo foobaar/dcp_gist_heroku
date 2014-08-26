@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var monk = require('monk');
@@ -12,31 +13,19 @@ var uristring =
   process.env.MONGOHQ_URL || 
   'mongodb://localhost/HelloMongoose';
 
-//ugly hack
-//require node modules (see package.json)
-var MongoClient = require('mongodb').MongoClient
-    , format = require('util').format;
 
-//connect away
-MongoClient.connect(uristring, function(err, db) {
-  if (err) throw err;
-  console.log("Connected to Database");
+mongoose.connect(uristring);
 
-  //create collection
-  db.createCollection("usercollection", function(err, collection){
-     if (err) throw err;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection.error:'));
 
-      console.log("Created usercollection");
-      console.log(collection);
-  });
+db.once('open', function callback () {
+    console.log('connected to mongodb');
 });
-//end of fucking ugly hack
-
-
 
 // The http server will listen to an appropriate port, or default to
 // port 5000.
-var db = monk(uristring); 
+
 var routes = require('./routes/index');
 var app = express();
 
