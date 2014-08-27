@@ -7,7 +7,11 @@ var mongoose = require('mongoose');
 /*GET articles. */
 router.get('/articles', function(req, res){
 	article.find({}, function(err, articles){
-        res.render('index',{array: articles});
+		if(req.get('Content-Type')==='application/json'){
+		res.setHeader('Content-Type', 'application/json');
+	    res.json(docs);
+		}
+	    res.render('index',{array: articles});
    });
 });
 
