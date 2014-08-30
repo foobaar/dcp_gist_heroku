@@ -9,7 +9,7 @@
   <body>
    <table class="table table-striped">
     {{#array}}
-       <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td>votes: {{votes}}</td></tr>
+       <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td>votes: {{votes}} <img src ="/images/vote.png"/></td></tr>
     {{/array}}
     </table>
   <h3><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Report here.</a></h3>
