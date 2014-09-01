@@ -11,6 +11,7 @@
   </head>
   <body>
   <div class="wrapper">
+  <script src="/javascripts/maincontorller.js"></script>
    <div class="container">
     <header class="hero-unit">
           <h1>DCP Gist</h1>
