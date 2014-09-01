@@ -7,7 +7,7 @@
     <link rel='stylesheet' href='/stylesheets/main.css'/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="/javascripts/maincontorller.js"></script>
+    <script src="/javascripts/maincontroller.js"></script>
   </head>
   <body>
   <div class="wrapper">
