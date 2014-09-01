@@ -3,59 +3,11 @@
   <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <title>Dcp Gist</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    function upVote(path){
-    $.ajax({
-  type: 'POST',
-  url: 'http://mighty-woodland-8571.herokuapp.com/vote',
-  data: { "path": path},
-  dataType: 'json',
-  success: function(data){
-    var voteSpanId = path+"-vote";
-    var voteCountSpan = document.getElementById(voteSpanId);
-    var vote = voteCountSpan.innerHTML;
-    vote++;
-    voteCountSpan.innerHTML = vote;
-  },
-  error: function(xhr, type){
-    alert('Oops! We couldn\'t register your vote');
-  }
-});
-    }
-    </script>
-      <style>
-        html, body {
-            height: 100%;
-        }
-        footer {
-            color: #666;
-            background: #222;
-            padding: 17px 0 18px 0;
-            border-top: 1px solid #000;
-        }
-        footer a {
-            color: #999;
-        }
-        footer a:hover {
-            color: #efefef;
-        }
-        .wrapper {
-            min-height: 100%;
-            height: auto !important;
-            height: 100%;
-            margin: 0 auto -63px;
-        }
-        .push {
-            height: 63px;
-        }
-        /* not required for sticky footer; just pushes hero down a bit */
-        .wrapper > .container {
-            padding-top: 60px;
-        }
-    </style>
+    <script src="/javascripts/maincontorller.js"></script>
   </head>
   <body>
   <div class="wrapper">
@@ -64,7 +16,6 @@
           <h1>DCP Gist</h1>
           <p>A really simple way to share useful links!!</p>
         </header>
-
    <table class="table table-striped">
     {{#array}}
        <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
