@@ -21,7 +21,7 @@
     "mongodb":"1.4.9",
     "hjs": "~0.0.6",
     "hogan-express":"*",
-    "mongoose":"3.9.1"
+    "mongoose":"3.8"
   },
   "changelog": [
     {
