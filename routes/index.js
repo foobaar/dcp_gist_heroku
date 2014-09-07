@@ -18,6 +18,7 @@ router.get('/articles', function(req, res){
 /*POST Articles*/
 router.post('/articles', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
+    var path = req.body.path;
     article.findOne({path: req.body.path}, function(err, articleFound){
         if(err)
             console.log("error");
@@ -30,17 +31,16 @@ router.post('/articles', function(req, res){
                 		res.json("vote successful");
                 }   
             });
-
+/*
         if(articleFound) {
             res.json("article already exists");
-        }         
+        }         */
         else {
                 var currentTime = new Date();
                 var newArticle = new article({name: req.body.name, 
                                               path: req.body.path, 
                                               votes: 0, type: "article", 
-                                              postDate: currentTime, 
-                                              dateInMilliseconds: currentTime.getTime()});
+                                              postDate: currentTime});
                 newArticle.save(function(err){
                 if(err)
                     res.json("error while posting article");
