@@ -19,8 +19,6 @@ router.get('/articles', function(req, res){
 router.post('/articles', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
     var path = req.body.path;
-    console.log(path);
-    console.log('******************');
     article.findOne({path: req.body.path}, function(err, articleFound){
         if(err)
             console.log("error");
@@ -47,7 +45,7 @@ router.post('/articles', function(req, res){
                 if(err)
                     res.json("error while posting article");
                 else
-                    res.json("post successful");
+                    res.json();
                 });
         }
     });
