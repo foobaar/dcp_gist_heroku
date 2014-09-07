@@ -34,7 +34,7 @@ router.post('/articles', function(req, res){
 /*
         if(articleFound) {
             res.json("article already exists");
-        }         */
+        } */        
         else {
                 var currentTime = new Date();
                 var newArticle = new article({name: req.body.name, 
