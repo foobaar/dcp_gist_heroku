@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 router.get('/articles', function(req, res){
 	article.find({}, function(err, articles){
 		if(req.get('Content-Type')==='application/json'){
-		res.setHeader('Content-Type', 'application/json');
-	    res.json(docs);
+    		res.setHeader('Content-Type', 'application/json');
+    	    res.json(docs);
 		}
 	    res.render('index',{array: articles});
    });
@@ -40,7 +40,8 @@ router.post('/articles', function(req, res){
                 var newArticle = new article({name: req.body.name, 
                                               path: req.body.path, 
                                               votes: 0, type: "article", 
-                                              postDate: currentTime});
+                                              postDate: currentTime,
+                                              score:1});
                 newArticle.save(function(err){
                 if(err)
                     res.json("error while posting article");

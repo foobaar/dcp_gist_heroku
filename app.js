@@ -6,6 +6,8 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var article = require('./models/articles');
+var _ = require('underscore');
 
 var uristring = 
   process.env.MONGOLAB_URI || 
@@ -40,6 +42,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+setInterval(function(){
+    console.log("Interval reached");
+    article.find({},function(err,articles){
+        _.each(articles,function(updateArticle){
+            var time = updateArticle.postDate.getTime() - new Date().getTime();
+            var updatedScore = (updateArticle.votes-1)/(Math.pow((time+2),1.8));
+            updateArticle.score = updatedScore;
+            updateArticle.save(function(err){
+                console.log(articles)
+            });
+        });
+    });
+}, 3600000);
+
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

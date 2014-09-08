@@ -1,1 +1,1 @@
-web: npm start; node node_mongo_update
+web: npm start;
