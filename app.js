@@ -48,14 +48,14 @@ setInterval(function(){
     article.find({},function(err,articles){
         _.each(articles,function(updateArticle){
             var time = updateArticle.postDate.getTime() - new Date().getTime();
-            var updatedScore = (updateArticle.votes-1)/(Math.pow((time+2),1.8));
+            var updatedScore = (updateArticle.votes-1)/time;
             updateArticle.score = updatedScore;
             updateArticle.save(function(err){
-                console.log(articles)
+                console.log("scores updated")
             });
         });
     });
-}, 3600000);
+}, 5000);
 
 
 /// catch 404 and forwarding to error handler

@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 
 /*GET articles. */
 router.get('/articles', function(req, res){
-	article.find({}, function(err, articles){
+	article.find({},  null, {sort:{score:-1}}, function(err, articles){
 		if(req.get('Content-Type')==='application/json'){
     		res.setHeader('Content-Type', 'application/json');
     	    res.json(docs);
