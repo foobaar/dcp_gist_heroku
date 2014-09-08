@@ -55,7 +55,7 @@ setInterval(function(){
             });
         });
     });
-}, 5000);
+}, 3600000);
 
 
 /// catch 404 and forwarding to error handler
