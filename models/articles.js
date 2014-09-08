@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
     path: String,
   	type: String,
   	votes: Number,
-  	postDate: Date}); 
+  	postDate: Date,
+  	score: Number}); 
 
 
 var article = mongoose.model('HelloMongoose', articleSchema);
