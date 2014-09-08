@@ -48,7 +48,7 @@ setInterval(function(){
     article.find({},function(err,articles){
         _.each(articles,function(updateArticle){
             var time = new Date().getTime() -  updateArticle.postDate.getTime();
-            var updatedScore = (updateArticle.votes-1)/time;
+            var updatedScore = (updateArticle.votes-1)/(time+1);
             updateArticle.score = updatedScore;
             updateArticle.save(function(err){
                 console.log("scores updated")
