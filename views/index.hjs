@@ -14,7 +14,7 @@
    <div class="container">
     <header class="hero-unit">
           <h1>DCP Gist</h1>
-          <p class="lead">A really simple way to share useful links!!</p>
+          <p class="lead">A really simple way to share useful links.</p>
         </header>
    <table class="table table-striped table-hover table-condensed">
     {{#array}}
