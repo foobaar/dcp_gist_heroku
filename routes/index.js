@@ -18,12 +18,12 @@ router.get('/articles', function(req, res){
 /*POST Articles*/
 router.post('/articles', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
-    var path = req.body.path;
-    article.findOne({path: req.body.path}, function(err, articleFound){
+    var path = req.body.gist.path;
+    article.findOne({path: req.body.gist.path}, function(err, articleFound){
         if(err)
             console.log("error");
         else 
-            article.findOneAndUpdate({path: req.body.path},  {$inc: {votes: 1}}, function(err){
+            article.findOneAndUpdate({path: req.body.gist.path},  {$inc: {votes: 1}}, function(err){
                 if(err) {
                      		res.json("error while posting vote");
                      	}
@@ -37,8 +37,8 @@ router.post('/articles', function(req, res){
         }     
         else {
                 var currentTime = new Date();
-                var newArticle = new article({name: req.body.name, 
-                                              path: req.body.path, 
+                var newArticle = new article({name: req.body.gist.name, 
+                                              path: req.body.gist.path, 
                                               votes: 0, type: "article", 
                                               postDate: currentTime,
                                               score:1});
@@ -56,7 +56,7 @@ router.post('/articles', function(req, res){
 /*POST Vote for Article*/
 router.post('/vote', function(req,res){
 	res.setHeader('Content-Type', 'application/json');
-    article.findOneAndUpdate({path: req.body.path},  {$inc: {votes: 1}}, function(err){
+    article.findOneAndUpdate({path: req.body.gist.path},  {$inc: {votes: 1}}, function(err){
         if(err)
             res.json("error while posting vote");
         else    
