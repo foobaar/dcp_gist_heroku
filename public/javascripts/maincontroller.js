@@ -16,3 +16,9 @@
   }
 });
     }
+
+function addUrlToCache(url){
+  if(!url){
+    $.jStorage.set(url, "visited");
+}
+}
