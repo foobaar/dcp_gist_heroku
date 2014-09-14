@@ -2,7 +2,7 @@
     $.ajax({
   type: 'POST',
   url: 'http://mighty-woodland-8571.herokuapp.com/vote',
-  data: { "path": path},
+  data: { "path": gist.path},
   dataType: 'json',
   success: function(data){
     var voteSpanId = path+"-vote";
