@@ -1,6 +1,7 @@
  html, body {
             height: 100%;
             float: true;
+            padding-bottom: 6px;
         }
         footer {
             color: #666;
@@ -22,8 +23,4 @@
         }
         .push {
             height: 63px;
-        }
-        /* not required for sticky footer; just pushes hero down a bit */
-        .wrapper > .container {
-            padding-top: 60px;
         }
