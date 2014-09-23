@@ -24,7 +24,17 @@
     {{/array}}
     </table>
     </div>
-  
+  <div class="pagination">
+    <ul>
+      <li><a href="#">Prev</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">Next</a></li>
+    </ul>
+</div>
      <footer>
     <div>
   <h3><center><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to report it.</a></center></h3>
