@@ -39,7 +39,7 @@ router.post('/articles', function(req, res){
                 var currentTime = new Date();
                 var newArticle = new article({name: req.body.gist.name, 
                                               path: req.body.gist.path, 
-                                              votes: 0, type: "article", 
+                                              votes: 1, type: "article", 
                                               postDate: currentTime,
                                               score:1});
                 newArticle.save(function(err){
