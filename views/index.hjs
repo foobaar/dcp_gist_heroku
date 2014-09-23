@@ -8,8 +8,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="/javascripts/maincontroller.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
-    <script src="https://raw.github.com/andris9/jStorage/master/jstorage.js"></script>
   </head>
   <body>
   <div class="wrapper">
@@ -23,8 +21,7 @@
        <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> &nbsp;&nbsp; <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
     {{/array}}
     </table>
-    </div>
-  <div class="pagination">
+    <div class="pagination">
     <ul>
       <li><a href="#">Prev</a></li>
       <li><a href="#">1</a></li>
@@ -35,6 +32,7 @@
       <li><a href="#">Next</a></li>
     </ul>
 </div>
+    </div>
      <footer>
     <div>
   <h3><center><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to report it.</a></center></h3>
