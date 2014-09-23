@@ -56,7 +56,11 @@ router.post('/articles', function(req, res){
 /*POST Vote for Article*/
 router.post('/vote', function(req,res){
 	res.setHeader('Content-Type', 'application/json');
-    article.findOneAndUpdate({path: req.body.gist.path},  {$inc: {votes: 1}}, function(err){
+    var voteCount = 1;
+    if(req.body.gist.unvote==='true'){
+        voteCount = -1
+    }
+    article.findOneAndUpdate({path: req.body.gist.path},  {$inc: {votes: voteCount}}, function(err){
         if(err)
             res.json("error while posting vote");
         else    
