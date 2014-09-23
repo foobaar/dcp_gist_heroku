@@ -24,11 +24,12 @@
     {{/array}}
     </table>
     </div>
-    </div>
+  
      <footer>
     <div>
-  <h3><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to report it.</a></h3>
+  <h3><center><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to report it.</a></center></h3>
   </div>
   </footer>
+   </div>
   </body>
 </html>
