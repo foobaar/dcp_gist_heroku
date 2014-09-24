@@ -56,6 +56,7 @@ router.post('/articles', function(req, res){
 /*POST Vote for Article*/
 router.post('/vote', function(req,res){
 	res.setHeader('Content-Type', 'application/json');
+    //default voteCount is 1;
     var voteCount = 1;
     if(req.body.gist.unvote==='true'){
         voteCount = -1

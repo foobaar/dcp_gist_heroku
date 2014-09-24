@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var article = require('./models/articles');
+var require = require('newrelic');
 var _ = require('underscore');
 
 var uristring = 
