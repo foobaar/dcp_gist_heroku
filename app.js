@@ -1,3 +1,4 @@
+require('newrelic');
 var http = require ('http');       // For serving a basic web page.
 var express = require('express');
 var path = require('path');
@@ -7,7 +8,6 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var article = require('./models/articles');
-var require = require('newrelic');
 var _ = require('underscore');
 
 var uristring = 
