@@ -22,7 +22,8 @@
     "hjs": "~0.0.6",
     "hogan-express":"*",
     "mongoose":"3.8.15",
-    "underscore":"*"
+    "underscore":"*",
+    "newrelic":"*"
   },
   "changelog": [
     {
