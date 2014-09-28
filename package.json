@@ -23,7 +23,7 @@
     "hogan-express":"*",
     "mongoose":"3.8.15",
     "underscore":"*",
-    "newrelic":"*"
+    "newrelic": "*"
   },
   "changelog": [
     {

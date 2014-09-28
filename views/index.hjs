@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/stylesheets/main.css'/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script src="/javascripts/maincontroller.js"></script>
   </head>
   <body>
@@ -16,9 +17,10 @@
           <h1>DCP Gist</h1>
           <p class="lead">A really simple way to share useful links.</p>
         </header>
-   <table class="table table-striped table-hover table-condensed">
+
+   <table class="table table-striped table-hover table-condensed" id="articles">
     {{#array}}
-       <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> &nbsp;&nbsp; <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
+       <tr><td><a href="{{path}}" target="_blank" onclick="addUrlToCache('{{path}}','{{name}}');" id="{{name}}">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> &nbsp;&nbsp; <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
     {{/array}}
     </table>
     </div>
@@ -28,5 +30,8 @@
   </div>
   </footer>
    </div>
+   <script type="text/javascript">
+    checkSavedLinks();
+  </script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-require('newrelic');
 var http = require ('http');       // For serving a basic web page.
 var express = require('express');
 var path = require('path');
