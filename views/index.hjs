@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel='stylesheet' href='/stylesheets/main.css'/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/javascripts/maincontroller.js"></script>
   </head>
   <body>
@@ -23,6 +23,17 @@
        <tr><td><a href="{{path}}" target="_blank" onclick="addUrlToCache('{{path}}','{{name}}');" id="{{name}}">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> &nbsp;&nbsp; <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
     {{/array}}
     </table>
+     <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      {{#pages}}
+      <li><a href="">1</a></li>
+      <li><a href="www.gistmash.com?skip=10">2</a></li>
+      <li><a href="www.gistmash.com?skip=20">3</a></li>
+      <li><a href="www.gistmash.com?skip=30">4</a></li>
+      <li><a href="www.gistmash.com?skip=40">5</a></li>
+      {{/pages}}
+      <li><a href="#">&raquo;</a></li>
+    </ul>
     </div>
      <footer>
     <div>

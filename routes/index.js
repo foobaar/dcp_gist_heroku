@@ -5,8 +5,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 /*GET articles. */
-router.get('/articles', function(req, res){
-	article.find({},  null, {sort:{score:-1}}, function(err, articles){
+    router.get('/', function(req, res){
+        var skipCount = req.skip;
+        if (typeof skipCount === 'undefined') {
+        skipCount=0;
+    }
+	article.find({votes:{$gt:0}},  null, {skip:skipCount, limit:10 sort:{score:-1}}, function(err, articles){
 		if(req.get('Content-Type')==='application/json'){
     		res.setHeader('Content-Type', 'application/json');
     	    res.json(docs);
@@ -69,10 +73,6 @@ router.post('/vote', function(req,res){
     });
 });
 
-/* GET Default mapping*/
-router.get('/', function(req, res) {
-  res.send('alive');
-});
 
 var cleanUrl = function(url) {
 	/*this regular expression removes protocols(eg. https) from urls*/
