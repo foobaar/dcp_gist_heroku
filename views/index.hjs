@@ -21,8 +21,7 @@
        <tr><td><a href="{{path}}" target="_blank">{{name}}</a></td><td><span id ="{{path}}-vote">{{votes}}</span> &nbsp;&nbsp; <img onclick="upVote('{{path}}');" src ="/images/vote.png"/></td></tr>
     {{/array}}
     </table>
-    </div>
-    <ul class="pagination">
+     <ul class="pagination">
       <li><a href="#">&laquo;</a></li>
       <li><a href="#">1</a></li>
       <li><a href="#">2</a></li>
@@ -31,6 +30,7 @@
       <li><a href="#">5</a></li>
       <li><a href="#">&raquo;</a></li>
     </ul>
+    </div>
      <footer>
     <div>
   <h3><center><a href = "https://github.com/foobaar/dcp_gist_heroku/issues" target = "_blank">Found an issue? Click here to report it.</a></center></h3>
