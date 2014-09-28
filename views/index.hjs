@@ -23,11 +23,13 @@
     </table>
      <ul class="pagination">
       <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
+      {{#pages}}
+      <li><a href="">1</a></li>
+      <li><a href="www.gistmash.com?skip=10">2</a></li>
+      <li><a href="www.gistmash.com?skip=20">3</a></li>
+      <li><a href="www.gistmash.com?skip=30">4</a></li>
+      <li><a href="www.gistmash.com?skip=40">5</a></li>
+      {{/pages}}
       <li><a href="#">&raquo;</a></li>
     </ul>
     </div>
