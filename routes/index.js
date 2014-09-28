@@ -5,7 +5,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 /*GET articles. */
-router.get('/articles', function(req, res){
+router.get('/', function(req, res){
 	article.find({},  null, {sort:{score:-1}}, function(err, articles){
 		if(req.get('Content-Type')==='application/json'){
     		res.setHeader('Content-Type', 'application/json');
@@ -69,10 +69,6 @@ router.post('/vote', function(req,res){
     });
 });
 
-/* GET Default mapping*/
-router.get('/', function(req, res) {
-  res.send('alive');
-});
 
 var cleanUrl = function(url) {
 	/*this regular expression removes protocols(eg. https) from urls*/
