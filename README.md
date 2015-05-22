@@ -16,7 +16,7 @@ https://github.com/foobaar/dcp_gist_heroku/wiki
 4. `heroku open`
 
 ### Heroku App Info
-> http://mighty-woodland-8571.herokuapp.com/articles
+> http://www.gistmash.com/
 
 
 ###The authors of this project are:
