@@ -45,6 +45,7 @@ app.use('/', routes);
 
 setInterval(function(){
     console.log("Interval reached");
+    console.log("update");
     article.find({},function(err,articles){
         _.each(articles,function(updateArticle){
             var time = new Date().getTime() -  updateArticle.postDate.getTime();
