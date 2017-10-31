@@ -12,23 +12,22 @@
   "author": "Fola Haritha Baargav",
   "license": "MIT",
   "dependencies": {
-    "express": "4.8.7",
+    "express": "4.16.2",
     "static-favicon": "1.0.2",
     "morgan": "1.2.3",
     "cookie-parser": "1.3.2",
-    "body-parser": "~1.0.0",
+    "body-parser": "1.0.0",
     "debug": "1.0.4",
     "mongodb":"1.4.8",
-    "hjs": "~0.0.6",
-    "hogan-express":"*",
-    "mongoose":"*",
-    "underscore":"*",
-    "newrelic": "*"
+    "hjs": "0.0.6",
+    "hogan-express":"0.5.2",
+    "mongoose":"4.12.5",
+    "underscore":"1.8.3",
+    "newrelic": "2.3.1"
   },
   "changelog": [
     {
       "0.0.0": "Initial release" 
     }
-  ],
-  "homepage": "http://mighty-woodland-8571.herokuapp.com"
+  ]
 }
