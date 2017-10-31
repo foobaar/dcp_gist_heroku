@@ -1,7 +1,6 @@
 # dcp_gist
 <img src = "https://travis-ci.org/foobaar/dcp_gist_heroku.svg"> 
 <br>
-<a href='https://www.versioneye.com/user/projects/53fac99de09da325f800059a'><img src='https://www.versioneye.com/user/projects/53fac99de09da325f800059a/badge.svg?style=flat' alt="Dependency Status" /></a>
 ### Description 
 This is a service which captures URLS and scores them based on votes and freshness.
 
