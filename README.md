@@ -2,10 +2,10 @@
 <img src = "https://travis-ci.org/foobaar/dcp_gist_heroku.svg"> 
 <br>
 <a href='https://www.versioneye.com/user/projects/53fac99de09da325f800059a'><img src='https://www.versioneye.com/user/projects/53fac99de09da325f800059a/badge.svg?style=flat' alt="Dependency Status" /></a>
-###Description 
+### Description 
 This is a service which captures URLS and scores them based on votes and freshness.
 
-###Documentation:
+### Documentation:
 https://github.com/foobaar/dcp_gist_heroku/wiki
 
 ### Installation Information
@@ -19,7 +19,7 @@ https://github.com/foobaar/dcp_gist_heroku/wiki
 > http://www.gistmash.com/
 
 
-###The authors of this project are:
+### The authors of this project are:
 > `Folarin S Soboyejo`
  `Haritha Kalyanaraman`
  `Baargav Raghavan`
