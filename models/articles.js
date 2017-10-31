@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
   	postDate: Date,
   	score: Number}); 
 
-
+console.log('ha ha');
 var article = mongoose.model('HelloMongoose', articleSchema);
 
 module.exports = article;
